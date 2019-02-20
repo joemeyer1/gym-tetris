@@ -18,4 +18,4 @@ class TetrisEnv(gym.Env):
 		self.t = Tetris()
 		
 	def render(self, mode='human', close=False):
-		pass
+		self.t.print_board()
