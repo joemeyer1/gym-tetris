@@ -8,7 +8,7 @@ from gym import spaces
 from gym.envs.toy_text import discrete
 
 
-class TetrisEnv(gym.Env):
+class TetrisExtraHardEnv(gym.Env):
 	metadata = {'render.modes': ['human']}
 
 	def __init__(self):
