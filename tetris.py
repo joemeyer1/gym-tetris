@@ -24,7 +24,7 @@ class Tetris:
 
 
 	# make board + a shape
-	def __init__(self, width=10):
+	def __init__(self, width = 4):
 
 		assert width>3, "width must be > 3"
 
@@ -68,6 +68,7 @@ class Tetris:
 	def take_action(self, action):
 		self.ACTION_MAP[action]()
 		self.step()
+
 
 
 	# rotates active shape
@@ -333,62 +334,6 @@ class Tetris:
 
 	def p(self):
 		self.print_board()
-
-
-
-# def print_instructions():
-# 	print("options: { a:left(), d:right(), w:rotate(), s:step(), p:print_board(), x:print_score(), q:quit() }")
-
-
-# # leaving this in main() yields error
-# # Python 2.7 compatibility hack
-# if hasattr(__builtins__, 'raw_input'):
-# 	input=raw_input
-
-# # wraps I/O
-# def main():
-# 	# default width is 4
-# 	width = 4
-# 	# you can also pass width as system arg
-# 	if sys.argv[-1].isdigit():
-# 		width = int(sys.argv[-1])
-
-# 	# create tetris obj
-# 	t = Tetris(width)
-# 	# manipulate it forever based on user input
-# 	# ('q' to quit)
-
-# 	t.print_board()
-# 	print_instructions()
-
-# 	while True:
-
-# 		commands = input()
-
-# 		for command in commands:
-
-# 			if command is 'a':
-# 				t.left()
-# 			elif command is 'd':
-# 				t.right()
-# 			elif command is 'w':
-# 				t.rotate()
-# 			elif command is 's':
-# 				t.step()
-# 			elif command is 'p':
-# 				t.print_board()
-# 			elif command is 'x':
-# 				print("score: ", t.score)
-# 			elif command is 'q':
-# 				return
-# 			else:
-# 				print ("Command not recognized.")
-# 				print_instructions()
-
-
-# main()
-
-
 
 
 
