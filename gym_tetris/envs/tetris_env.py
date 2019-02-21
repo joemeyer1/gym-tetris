@@ -16,7 +16,7 @@ class TetrisEnv(gym.Env):
 		self.action_space = spaces.Discrete(5)
 
 		self.observation_space = spaces.Tuple((
-			spaces.Discrete(16),
+			spaces.Discrete(32),
 			spaces.Discrete(4)))
 		self.seed()
 		#act_space = [k for k in self.t.ACTION_MAP]
